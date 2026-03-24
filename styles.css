@@ -1,0 +1,29 @@
+body{
+    background-image: url("/cda\ simplon/easter/images/fond.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -250px;
+    font-family: "Bitcount Prop Double", system-ui;
+    margin: 0;
+}
+
+.menuContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.menu{
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width:1700px){
+    body{
+        background-position-y: 0px;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+}
