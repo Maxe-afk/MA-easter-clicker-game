@@ -4,25 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&display=swap');
-    </style>
-    <title></title>
+    <title>Easter Clicker</title>
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/7232/7232040.png" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <main>
-        <div class="menuContainer">
+        <div class="menuContainer" id="menuContainer">
             <ul class="menu">
-                <li><a href="#">Nouvelle Partie</a></li>
-                <li><a>Scores</a></li>
-                <li><a>Instructions</a></li>
+                <h1>Easter Clicker</h1>
+                <li><button id="startButton">Nouvelle Partie</button></li>
+                <li><button id="instructionButton">Instructions</button></li>
             </ul>
         </div>
+
+        <div class="instructionPanel" id="instructionPanel">
+            <h2>Comment jouer :</h2>
+            <ul>
+                <li>Clique sur les oeufs lorsqu'ils apparaissent</li>
+                <li>Oeuf en chocolat : +1 point</li>
+                <li>Oeuf doré : +5 points</li>
+                <li>Oeuf cassé : -2 points</li>
+                <li>Tu as 30 secondes !</li>
+            </ul>
+        </div>
+
+        <div class="gameContainer hidden" id="gameContainer">
+            <div class="hud">
+                <span>Score : <strong id="scoreDisplay">0</strong></span>
+                <span>Temps : <strong id="timerDisplay">30</strong>s</span>
+            </div>
+            <div class="gameArea" id="gameArea"></div>
+        </div>
+
+        <div class="gameOverContainer hidden" id="gameOverContainer">
+            <h2>Partie terminée !</h2>
+            <p>Score final : <strong id="finalScore"></strong></p>
+            <button id="replayButton">Rejouer</button>
+            <button id="menuButton">Menu</button>
+        </div>
     </main>
-    <footer>
-        <script src="script.js" defer></script>
-    </footer>
+
+    <script src="script.js"></script>
 </body>
